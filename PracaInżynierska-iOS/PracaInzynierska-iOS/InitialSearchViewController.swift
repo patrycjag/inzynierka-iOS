@@ -12,10 +12,9 @@ class InitialSearchViewController: UIViewController {
     
     //MARK: - Outlets
     
-    @IBOutlet weak var ceneoSwitch: UISwitch!
-    @IBOutlet weak var allegroSwitch: UISwitch!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var showBasketButton: UIButton!
     
     //MARK: - Life cycle
     
@@ -33,11 +32,16 @@ class InitialSearchViewController: UIViewController {
         self.navigationController?.pushViewController(searchResultsVC, animated: true)
     }
     
+    @IBAction func showBasketPressed(_ sender: UIButton) {
+        let controller = self.getViewController(withIdentifier: "basketVC", fromStoryboard: "BasketController")
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     //MARK: - View setup
     
     private func setUpView() {
         searchTextField.delegate = self
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear

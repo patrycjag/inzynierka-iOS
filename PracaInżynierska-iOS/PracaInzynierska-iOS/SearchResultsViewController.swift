@@ -26,12 +26,20 @@ class SearchResultsViewController: UIViewController {
         searchResultsTableView.delegate = self
         searchResultsTableView.dataSource = self
         searchTextField.delegate = self
+        
+        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "basket")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(self.basketPressed))
+        rightBarButtonItem.tintColor = UIColor.systemYellow
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    @objc func basketPressed() {
+        let controller = self.getViewController(withIdentifier: "basketVC", fromStoryboard: "BasketController")
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func searchButtonPressed() {
         
     }
-    
 }
 
 extension SearchResultsViewController: UITextFieldDelegate {
@@ -46,7 +54,8 @@ extension SearchResultsViewController: UITextFieldDelegate {
 extension SearchResultsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected")
+        let controller = self.getViewController(withIdentifier: "productOverviewVC", fromStoryboard: "ProductOverviewViewController")
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
