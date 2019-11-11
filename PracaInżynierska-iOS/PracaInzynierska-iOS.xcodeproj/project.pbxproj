@@ -22,8 +22,11 @@
 		B37C38F123721CDD00D5EE8A /* BasketController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37C38F023721CDD00D5EE8A /* BasketController.storyboard */; };
 		B37C38F323721CEB00D5EE8A /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C38F223721CEB00D5EE8A /* BasketViewController.swift */; };
 		B37FBBAA2352280400A8EA84 /* InitialSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37FBBA92352280400A8EA84 /* InitialSearchViewController.swift */; };
+		B3B880BB2379A1230092B166 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B880BA2379A1230092B166 /* AlertExtension.swift */; };
+		B3BC491D2379AE7E0097ECA0 /* ProductOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BC491C2379AE7E0097ECA0 /* ProductOffer.swift */; };
 		B3C7353F23537832001677F3 /* ProductOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7353E23537832001677F3 /* ProductOverviewViewController.swift */; };
 		B3C7354123537844001677F3 /* ProductOverviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C7354023537844001677F3 /* ProductOverviewViewController.storyboard */; };
+		B3E5FC4723795F290023116F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E5FC4623795F290023116F /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,8 +49,11 @@
 		B37C38F023721CDD00D5EE8A /* BasketController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = BasketController.storyboard; path = ../BasketController.storyboard; sourceTree = "<group>"; };
 		B37C38F223721CEB00D5EE8A /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BasketViewController.swift; path = ../BasketViewController.swift; sourceTree = "<group>"; };
 		B37FBBA92352280400A8EA84 /* InitialSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InitialSearchViewController.swift; path = ../InitialSearchViewController.swift; sourceTree = "<group>"; };
+		B3B880BA2379A1230092B166 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		B3BC491C2379AE7E0097ECA0 /* ProductOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductOffer.swift; path = Basket/ProductOffer.swift; sourceTree = "<group>"; };
 		B3C7353E23537832001677F3 /* ProductOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductOverviewViewController.swift; path = ../ProductOverviewViewController.swift; sourceTree = "<group>"; };
 		B3C7354023537844001677F3 /* ProductOverviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ProductOverviewViewController.storyboard; path = ../ProductOverviewViewController.storyboard; sourceTree = "<group>"; };
+		B3E5FC4623795F290023116F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,9 @@
 				B33D76DB23521A0200D8FBEA /* APIClient.swift */,
 				B33B1B102353215D001C8F70 /* ViewControllerPresentationExtension.swift */,
 				B33B1B1423533256001C8F70 /* GlobalVariables.swift */,
+				B3BC491C2379AE7E0097ECA0 /* ProductOffer.swift */,
+				B3E5FC4623795F290023116F /* Product.swift */,
+				B3B880BA2379A1230092B166 /* AlertExtension.swift */,
 			);
 			path = "PracaInzynierska-iOS";
 			sourceTree = "<group>";
@@ -275,9 +284,12 @@
 				B33B1B1323533158001C8F70 /* SearchResultTableViewCell.swift in Sources */,
 				B33D76C82352191C00D8FBEA /* AppDelegate.swift in Sources */,
 				B33B1B1523533256001C8F70 /* GlobalVariables.swift in Sources */,
+				B3B880BB2379A1230092B166 /* AlertExtension.swift in Sources */,
 				B37FBBAA2352280400A8EA84 /* InitialSearchViewController.swift in Sources */,
+				B3E5FC4723795F290023116F /* Product.swift in Sources */,
 				B3C7353F23537832001677F3 /* ProductOverviewViewController.swift in Sources */,
 				B33D76CA2352191C00D8FBEA /* SceneDelegate.swift in Sources */,
+				B3BC491D2379AE7E0097ECA0 /* ProductOffer.swift in Sources */,
 				B33D76DC23521A0200D8FBEA /* APIClient.swift in Sources */,
 				B33B1B112353215D001C8F70 /* ViewControllerPresentationExtension.swift in Sources */,
 				B33B1B0E23531F61001C8F70 /* SearchResultsViewController.swift in Sources */,

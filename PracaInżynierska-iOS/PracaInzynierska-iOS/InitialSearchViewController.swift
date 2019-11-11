@@ -21,15 +21,26 @@ class InitialSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpView()
-        APIClient.shared.getDataFromCeneo()
     }
     
     //MARK: - Actions
     
     @IBAction func searchButtonPressed() {
         searchTextField.resignFirstResponder()
-        let searchResultsVC = self.getViewController(withIdentifier: "searchResultsVC", fromStoryboard: "SearchResultsViewController")
-        self.navigationController?.pushViewController(searchResultsVC, animated: true)
+        guard let query = self.searchTextField.text, query != "" else {
+            self.showInfoAlert(alertTitle: "Error", description: "Please enter a valid product name", firstTitle: "Ok", firstAction: nil)
+            return
+        }
+        APIClient.shared.getProducts(for: query.replacingOccurrences(of: " ", with: "+")) { result, error in
+            guard let productArray = result, error == nil else {
+                self.showInfoAlert(alertTitle: "Error", description: error!.localizedDescription, firstTitle: "Ok", firstAction: nil)
+                return
+            }
+            
+            let searchResultsVC = self.getViewController(withIdentifier: "searchResultsVC", fromStoryboard: "SearchResultsViewController") as! SearchResultsViewController
+            searchResultsVC.productArray = productArray
+            self.navigationController?.pushViewController(searchResultsVC, animated: true)
+        }
     }
     
     @IBAction func showBasketPressed(_ sender: UIButton) {

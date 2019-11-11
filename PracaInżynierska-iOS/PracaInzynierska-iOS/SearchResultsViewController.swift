@@ -8,6 +8,7 @@
 
 import UIKit
 import Toast_Swift
+import SDWebImage
 
 class SearchResultsViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class SearchResultsViewController: UIViewController {
     @IBOutlet weak var searchResultsTableView: UITableView!
     
     private var isToastVisible = false
+    var productArray = [Product]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,20 @@ class SearchResultsViewController: UIViewController {
     }
     
     @IBAction func searchButtonPressed() {
-        
+        searchTextField.resignFirstResponder()
+        guard let query = self.searchTextField.text else {
+            self.showInfoAlert(alertTitle: "Error", description: "Please enter a valid product name", firstTitle: "Ok", firstAction: nil)
+            return
+        }
+        APIClient.shared.getProducts(for: query.replacingOccurrences(of: " ", with: "+")) { result, error in
+            guard let productResult = result, error == nil else {
+                self.showInfoAlert(alertTitle: "Error", description: error!.localizedDescription, firstTitle: "Ok", firstAction: nil)
+                return
+            }
+            
+            self.productArray = productResult
+            self.searchResultsTableView.reloadSections(IndexSet(integer: 0), with: .bottom)
+        }
     }
 }
 
@@ -54,10 +69,18 @@ extension SearchResultsViewController: UITextFieldDelegate {
 extension SearchResultsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = self.getViewController(withIdentifier: "productOverviewVC", fromStoryboard: "ProductOverviewViewController")
-        self.navigationController?.pushViewController(controller, animated: true)
+        APIClient.shared.getProductDetails(for: "\( productArray[indexPath.row].skapiecID)") { (response, error) in
+            guard let offers = response, error == nil else {
+                self.showInfoAlert(alertTitle: "Error", description: error!.localizedDescription, firstTitle: "Ok", firstAction: nil)
+                return
+            }
+            
+            let controller = self.getViewController(withIdentifier: "productOverviewVC", fromStoryboard: "ProductOverviewViewController") as! ProductOverviewViewController
+            controller.product = self.productArray[indexPath.row]
+            controller.shopOffers = offers
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
     }
-    
 }
 
 extension SearchResultsViewController: UITableViewDataSource {
@@ -67,11 +90,15 @@ extension SearchResultsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.productArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchResultCell", for: indexPath) as! SearchResultTableViewCell
+        let product = self.productArray[indexPath.row]
+        cell.productImageView.sd_setImage(with: URL(string: product.image), placeholderImage: UIImage(), options: .continueInBackground, completed: nil)
+        cell.productNameLabel.text = product.name
+        cell.priceLabel.text = "Cena od: \n\(Int(product.lowestPrice)) zł"
         cell.delegate = self
         cell.productImageView.tag = indexPath.row
         return cell
@@ -82,9 +109,7 @@ extension SearchResultsViewController: UITableViewDataSource {
 extension SearchResultsViewController: SearchResultCellDelegate {
     
     func addToBasketWasPressed(onRow row: Int) {
-        
-        //Add new item to basket TODO
-//        GlobalVariables.userBasket.append("")
+        GlobalVariables.userBasket.append(self.productArray[row])
         print("ADDING FROM ROW: \(row)")
         if !self.isToastVisible {
             self.view.makeToast("Dodano przedmiot do porównania.")

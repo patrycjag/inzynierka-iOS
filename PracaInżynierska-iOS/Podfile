@@ -8,5 +8,6 @@ target 'PracaInzynierska-iOS' do
   # Pods for PracaInzynierska-iOS
   pod 'Alamofire'
   pod 'Toast-Swift', '~> 5.0.0'
+  pod 'SDWebImage', '~> 5.0'
   
 end

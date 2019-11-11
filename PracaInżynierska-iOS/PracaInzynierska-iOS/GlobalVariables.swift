@@ -11,7 +11,8 @@ import UIKit
 
 class GlobalVariables {
     
-    static var userBasket: [String] = []
+    static var userBasket: [Product] = []
     static var darkYellow = UIColor(red: 204/255, green: 170/255, blue: 58/255, alpha: 1)
     static var darkTeal = UIColor(red: 100/255, green: 165/255, blue: 206/255, alpha: 1)
+    
 }

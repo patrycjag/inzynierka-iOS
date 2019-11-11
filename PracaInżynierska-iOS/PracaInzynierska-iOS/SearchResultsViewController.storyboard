@@ -71,9 +71,9 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iphone 7 plus" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Eo-pa-suL">
-                                                            <rect key="frame" x="142" y="10" width="155" height="25.5"/>
+                                                            <rect key="frame" x="151" y="10" width="146" height="25.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" red="0.39053485259999998" green="0.64555294060000001" blue="0.80630928879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziq-Iy-1nX">
@@ -88,14 +88,14 @@
                                                             </state>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kly-67-Its">
-                                                            <rect key="frame" x="142" y="92" width="155" height="50"/>
+                                                            <rect key="frame" x="151" y="92" width="146" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="6CG-u0-va4"/>
                                                             </constraints>
                                                             <string key="text">Cena od:
 1200 zl</string>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" red="0.39053485259999998" green="0.64555294060000001" blue="0.80630928879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub5-sx-H3o">
@@ -113,17 +113,17 @@
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.39053485259999998" green="0.64555294060000001" blue="0.80630928879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="Ub5-sx-H3o" firstAttribute="top" secondItem="ziq-Iy-1nX" secondAttribute="bottom" id="1Tg-ZB-7h5"/>
                                                         <constraint firstItem="Dps-Re-dpt" firstAttribute="leading" secondItem="hf5-ce-ns4" secondAttribute="leading" constant="5" id="3Ob-Px-gii"/>
                                                         <constraint firstAttribute="bottom" secondItem="Ub5-sx-H3o" secondAttribute="bottom" id="4dU-ms-HaZ"/>
-                                                        <constraint firstItem="3Eo-pa-suL" firstAttribute="leading" secondItem="Dps-Re-dpt" secondAttribute="trailing" constant="5" id="7CT-fj-tIG"/>
+                                                        <constraint firstItem="3Eo-pa-suL" firstAttribute="leading" secondItem="Dps-Re-dpt" secondAttribute="trailing" constant="14" id="7CT-fj-tIG"/>
                                                         <constraint firstItem="ziq-Iy-1nX" firstAttribute="height" secondItem="hf5-ce-ns4" secondAttribute="height" multiplier="1/2" id="KSI-MS-Api"/>
                                                         <constraint firstAttribute="trailing" secondItem="ziq-Iy-1nX" secondAttribute="trailing" id="LX1-jL-1IF"/>
                                                         <constraint firstItem="Ub5-sx-H3o" firstAttribute="height" secondItem="ziq-Iy-1nX" secondAttribute="height" id="Yue-YT-Bzk"/>
                                                         <constraint firstItem="Kly-67-Its" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Eo-pa-suL" secondAttribute="bottom" constant="5" id="aWo-KO-LPw"/>
-                                                        <constraint firstItem="Kly-67-Its" firstAttribute="leading" secondItem="Dps-Re-dpt" secondAttribute="trailing" constant="5" id="dzb-EB-5kq"/>
+                                                        <constraint firstItem="Kly-67-Its" firstAttribute="leading" secondItem="Dps-Re-dpt" secondAttribute="trailing" constant="14" id="dzb-EB-5kq"/>
                                                         <constraint firstItem="Dps-Re-dpt" firstAttribute="centerY" secondItem="hf5-ce-ns4" secondAttribute="centerY" id="gEa-Wh-PlI"/>
                                                         <constraint firstItem="ziq-Iy-1nX" firstAttribute="top" secondItem="hf5-ce-ns4" secondAttribute="top" id="lZi-A1-RNG"/>
                                                         <constraint firstAttribute="trailing" secondItem="Ub5-sx-H3o" secondAttribute="trailing" id="mXP-va-XvW"/>
