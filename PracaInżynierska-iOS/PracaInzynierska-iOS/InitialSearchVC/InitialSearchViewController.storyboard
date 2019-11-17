@@ -47,8 +47,8 @@
                                     <constraint firstItem="VCE-ty-1xB" firstAttribute="height" secondItem="kKy-g5-jse" secondAttribute="height" id="lyr-bc-USh"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wowowo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW4-Fa-ewv">
-                                <rect key="frame" x="143" y="238" width="128" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wyszukaj produkt aby rozpocząć" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW4-Fa-ewv">
+                                <rect key="frame" x="0.0" y="238" width="414" height="72"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Pokaż koszyk" image="basket">
+                                <state key="normal" title="Porównanie" image="basket">
                                     <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -70,6 +70,7 @@
                         <constraints>
                             <constraint firstItem="klG-Z9-BBh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0qW-Go-1kQ"/>
                             <constraint firstItem="klG-Z9-BBh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9hJ-hH-B1y"/>
+                            <constraint firstItem="HW4-Fa-ewv" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="AHq-3N-CiG"/>
                             <constraint firstItem="ikK-aX-FXz" firstAttribute="height" secondItem="klG-Z9-BBh" secondAttribute="height" id="CPu-5e-sAM"/>
                             <constraint firstItem="ikK-aX-FXz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DRy-FW-7OQ"/>
                             <constraint firstItem="kKy-g5-jse" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HW4-Fa-ewv" secondAttribute="bottom" priority="750" constant="50" id="JGv-en-Z3L"/>

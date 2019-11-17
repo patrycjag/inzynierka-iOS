@@ -18,6 +18,7 @@ class SearchResultsViewController: UIViewController {
     
     private var isToastVisible = false
     var productArray = [Product]()
+    var activityView: ActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class SearchResultsViewController: UIViewController {
         searchResultsTableView.delegate = self
         searchResultsTableView.dataSource = self
         searchTextField.delegate = self
+        
+        self.activityView = ActivityIndicatorView(frame: UIScreen.main.bounds)
         
         let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "basket")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(self.basketPressed))
         rightBarButtonItem.tintColor = UIColor.systemYellow
@@ -45,7 +48,9 @@ class SearchResultsViewController: UIViewController {
             self.showInfoAlert(alertTitle: "Error", description: "Please enter a valid product name", firstTitle: "Ok", firstAction: nil)
             return
         }
+        self.view.addSubview(activityView ?? UIView())
         APIClient.shared.getProducts(for: query.replacingOccurrences(of: " ", with: "+")) { result, error in
+            self.activityView?.removeFromSuperview()
             guard let productResult = result, error == nil else {
                 self.showInfoAlert(alertTitle: "Error", description: error!.localizedDescription, firstTitle: "Ok", firstAction: nil)
                 return
@@ -69,15 +74,19 @@ extension SearchResultsViewController: UITextFieldDelegate {
 extension SearchResultsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.view.addSubview(activityView ?? UIView())
         APIClient.shared.getProductDetails(for: "\( productArray[indexPath.row].skapiecID)") { (response, error) in
+            self.activityView?.removeFromSuperview()
             guard let offers = response, error == nil else {
                 self.showInfoAlert(alertTitle: "Error", description: error!.localizedDescription, firstTitle: "Ok", firstAction: nil)
                 return
             }
+            let cell = tableView.cellForRow(at: indexPath) as! SearchResultTableViewCell
             
             let controller = self.getViewController(withIdentifier: "productOverviewVC", fromStoryboard: "ProductOverviewViewController") as! ProductOverviewViewController
             controller.product = self.productArray[indexPath.row]
             controller.shopOffers = offers
+            controller.productImage = cell.productImageView.image
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
@@ -98,7 +107,7 @@ extension SearchResultsViewController: UITableViewDataSource {
         let product = self.productArray[indexPath.row]
         cell.productImageView.sd_setImage(with: URL(string: product.image), placeholderImage: UIImage(), options: .continueInBackground, completed: nil)
         cell.productNameLabel.text = product.name
-        cell.priceLabel.text = "Cena od: \n\(Int(product.lowestPrice)) zł"
+        cell.priceLabel.text = "Cena od: \n\(Int(product.lowestPrice))zł"
         cell.delegate = self
         cell.productImageView.tag = indexPath.row
         return cell
@@ -114,7 +123,7 @@ extension SearchResultsViewController: SearchResultCellDelegate {
         if !self.isToastVisible {
             self.view.makeToast("Dodano przedmiot do porównania.")
             self.isToastVisible = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.isToastVisible = false
             }
         }

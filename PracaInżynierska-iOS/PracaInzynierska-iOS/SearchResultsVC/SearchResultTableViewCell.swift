@@ -21,7 +21,7 @@ class SearchResultTableViewCell: UITableViewCell {
     var delegate: SearchResultCellDelegate?
     
     @IBAction func addToBasketWasPressed(_ sender: UIButton) {
-        self.delegate?.addToBasketWasPressed(onRow: sender.tag)
+        self.delegate?.addToBasketWasPressed(onRow: productImageView.tag)
     }
     
 }

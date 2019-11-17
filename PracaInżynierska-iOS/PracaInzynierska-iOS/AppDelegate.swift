@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         style.displayShadow = true
         style.messageAlignment = .center
         
-        ToastManager.shared.duration = 1
+        ToastManager.shared.duration = 0.4
         ToastManager.shared.position = .center
         ToastManager.shared.style = style
         // Override point for customization after application launch.

@@ -17,12 +17,15 @@ class ProductOverviewViewController: UIViewController {
     private var isToastVisible = false
     var product: Product?
     var shopOffers = [ProductOffer]()
+    var productImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.shopOffersTableView.delegate = self
         self.shopOffersTableView.dataSource = self
+        self.productNameLabel.text = self.product?.name
+        self.productImageView.image = self.productImage ?? UIImage()
     }
     
     @IBAction func addToComparisonPressed(_ sender: UIButton) {
@@ -47,11 +50,16 @@ extension ProductOverviewViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shopOfferCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shopOfferCell", for: indexPath) as! ShopOfferTableViewCell
+        let shopOffer = self.shopOffers[indexPath.row]
+        cell.descriptionLabel.text = shopOffer.description.replacingOccurrences(of: "\n", with: "")
+        cell.priceLabel.text = "Cena od: \(shopOffer.price)zł"
+        cell.shopImageView.sd_setImage(with: URL(string: shopOffer.shopImage.replacingOccurrences(of: "//", with: "https://")), completed: nil)
+        cell.shopNameLabel.text = shopOffer.shopName
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 120
     }
 }

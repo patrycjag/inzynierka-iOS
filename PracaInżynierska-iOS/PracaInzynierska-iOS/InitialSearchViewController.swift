@@ -16,6 +16,8 @@ class InitialSearchViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var showBasketButton: UIButton!
     
+    var activityView: ActivityIndicatorView?
+    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -31,9 +33,11 @@ class InitialSearchViewController: UIViewController {
             self.showInfoAlert(alertTitle: "Error", description: "Please enter a valid product name", firstTitle: "Ok", firstAction: nil)
             return
         }
+        self.view.addSubview(activityView ?? UIView())
         APIClient.shared.getProducts(for: query.replacingOccurrences(of: " ", with: "+")) { result, error in
+            self.activityView?.removeFromSuperview()
             guard let productArray = result, error == nil else {
-                self.showInfoAlert(alertTitle: "Error", description: error!.localizedDescription, firstTitle: "Ok", firstAction: nil)
+                self.showInfoAlert(alertTitle: "Błąd", description: "Nie znaleźliśmy produktów spełniających warunki.", firstTitle: "Ok", firstAction: nil)
                 return
             }
             
@@ -51,6 +55,7 @@ class InitialSearchViewController: UIViewController {
     //MARK: - View setup
     
     private func setUpView() {
+        self.activityView = ActivityIndicatorView(frame: UIScreen.main.bounds)
         searchTextField.delegate = self
          self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
