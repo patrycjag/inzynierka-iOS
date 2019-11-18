@@ -14,5 +14,10 @@ class ResultTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var shopLabel: UILabel!
-
+    @IBOutlet weak var cellBackgroundView: UIView! {
+        didSet {
+            cellBackgroundView.layer.borderColor = GlobalVariables.darkGray.cgColor
+            cellBackgroundView.layer.borderWidth = 2
+        }
+    }
 }

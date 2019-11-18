@@ -29,8 +29,8 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="DsB-jD-KI9"/>
                                         </constraints>
-                                        <color key="onTintColor" red="0.39053485259999998" green="0.64555294060000001" blue="0.80630928879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="thumbTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="onTintColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="1" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z jednego sklepu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q4-xf-hYY">
                                         <rect key="frame" x="65" y="0.0" width="160" height="31"/>
@@ -38,7 +38,7 @@
                                             <constraint firstAttribute="width" constant="160" id="bTr-VH-J0G"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -46,23 +46,23 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z kosztem dostawy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbv-zf-wAl">
                                 <rect key="frame" x="159.5" y="720.5" width="177.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Porównuj ceny:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNF-8G-h7e">
                                 <rect key="frame" x="137" y="632" width="140" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5sD-qH-pU5">
                                 <rect key="frame" x="95" y="717" width="51" height="31"/>
-                                <color key="onTintColor" red="0.39053485259999998" green="0.64555294060000001" blue="0.80630928879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="thumbTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="onTintColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="1" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U9D-gR-Y7W">
                                 <rect key="frame" x="0.0" y="44" width="414" height="568"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationLevel="5" indentationWidth="10" reuseIdentifier="basketCell" rowHeight="162" id="LfX-Oo-lzr" customClass="BasketProductTableViewCell" customModule="PracaInzynierska_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="162"/>
@@ -76,7 +76,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oLq-cc-XEK">
                                                             <rect key="frame" x="5" y="11" width="132" height="130"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="oLq-cc-XEK" secondAttribute="height" id="EBk-Dd-qfq"/>
@@ -85,12 +85,12 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iphone 7 plus" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mFq-LQ-Ewy">
                                                             <rect key="frame" x="151" y="10" width="203" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                            <color key="textColor" red="0.39053485259999998" green="0.64555294060000001" blue="0.80630928879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMq-IF-uNu">
                                                             <rect key="frame" x="364" y="0.0" width="50" height="152"/>
-                                                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="gj6-Br-SBf"/>
                                                             </constraints>
@@ -108,7 +108,7 @@
                                                             <string key="text">Cena od:
 1200zl</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                            <color key="textColor" red="0.39053485259999998" green="0.64555294060000001" blue="0.80630928879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -148,18 +148,21 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96J-X8-5x5">
-                                <rect key="frame" x="172" y="769.5" width="70" height="30"/>
+                                <rect key="frame" x="41.5" y="769.5" width="331" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="k9v-nc-kuW"/>
-                                    <constraint firstAttribute="height" constant="30" id="lBv-Yq-7OG"/>
+                                    <constraint firstAttribute="height" constant="50" id="lBv-Yq-7OG"/>
                                 </constraints>
-                                <state key="normal" title="Porównaj"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <state key="normal" title="Porównaj">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="compareWasPressed:" destination="qm0-Zc-FGW" eventType="touchUpInside" id="DpC-ma-5ED"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5sD-qH-pU5" firstAttribute="top" secondItem="hLI-nE-iF2" secondAttribute="bottom" constant="20" id="2L4-Lc-2gc"/>
                             <constraint firstItem="Vbv-zf-wAl" firstAttribute="leading" secondItem="3Q4-xf-hYY" secondAttribute="leading" id="7OC-wx-V6c"/>
@@ -175,6 +178,7 @@
                             <constraint firstItem="6hC-DQ-WWi" firstAttribute="bottom" secondItem="U9D-gR-Y7W" secondAttribute="bottom" constant="250" id="ZGx-BW-UfV"/>
                             <constraint firstItem="96J-X8-5x5" firstAttribute="centerX" secondItem="WNF-8G-h7e" secondAttribute="centerX" id="dxY-kN-OUx"/>
                             <constraint firstItem="U9D-gR-Y7W" firstAttribute="leading" secondItem="6hC-DQ-WWi" secondAttribute="leading" id="gvQ-zO-SBc"/>
+                            <constraint firstItem="96J-X8-5x5" firstAttribute="width" secondItem="6hC-DQ-WWi" secondAttribute="width" multiplier="0.8" id="hvD-HG-wC6"/>
                             <constraint firstItem="m2y-6q-Enz" firstAttribute="top" secondItem="WNF-8G-h7e" secondAttribute="bottom" constant="10" id="oG4-nY-iwW"/>
                             <constraint firstItem="cjp-vX-bSh" firstAttribute="centerY" secondItem="U9D-gR-Y7W" secondAttribute="centerY" id="pUj-ue-HqU"/>
                             <constraint firstItem="5sD-qH-pU5" firstAttribute="centerY" secondItem="Vbv-zf-wAl" secondAttribute="centerY" id="tcc-Fh-MR9"/>
