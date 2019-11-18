@@ -12,18 +12,26 @@ import SDWebImage
 
 class SearchResultsViewController: UIViewController {
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchResultsTableView: UITableView!
+    
+    //MARK: - Variables
     
     private var isToastVisible = false
     var productArray = [Product]()
     var activityView: ActivityIndicatorView?
     
+    //MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpView()
     }
+    
+    //MARK: - View setup
     
     private func setUpView() {
         searchResultsTableView.delegate = self
@@ -36,6 +44,8 @@ class SearchResultsViewController: UIViewController {
         rightBarButtonItem.tintColor = UIColor.systemYellow
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
+    
+    //MARK: - Actions
     
     @objc func basketPressed() {
         let controller = self.getViewController(withIdentifier: "basketVC", fromStoryboard: "BasketController")
@@ -62,6 +72,8 @@ class SearchResultsViewController: UIViewController {
     }
 }
 
+//MARK: - Text field
+
 extension SearchResultsViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -70,6 +82,8 @@ extension SearchResultsViewController: UITextFieldDelegate {
     }
     
 }
+
+//MARK: - Table view
 
 extension SearchResultsViewController: UITableViewDelegate {
     
@@ -114,6 +128,8 @@ extension SearchResultsViewController: UITableViewDataSource {
     }
     
 }
+
+//MARK: - Add to basket
 
 extension SearchResultsViewController: SearchResultCellDelegate {
     

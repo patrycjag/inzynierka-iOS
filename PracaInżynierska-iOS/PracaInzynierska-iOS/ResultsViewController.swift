@@ -11,11 +11,17 @@ import SDWebImage
 
 class ResultsViewController: UIViewController {
     
+    //MARK: - Outlets
+    
     @IBOutlet weak var resultsTableView: UITableView!
     @IBOutlet weak var totalPriceLabel: UILabel!
     
+    //MARK: - Variables
+    
     var singleShopResult: SingleShopResult?
     var multipleShopResult: MultipleShopResult?
+    
+    //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +32,8 @@ class ResultsViewController: UIViewController {
         self.totalPriceLabel.text = "Cena sumaryczna: \(totalPrice ?? 0)zł"
     }
 }
+
+//MARK: - Table View
 
 extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
     

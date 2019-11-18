@@ -10,14 +10,20 @@ import UIKit
 
 class ProductOverviewViewController: UIViewController {
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var shopOffersTableView: UITableView!
+    
+   //MARK: - Variables
     
     private var isToastVisible = false
     var product: Product?
     var shopOffers = [ProductOffer]()
     var productImage: UIImage?
+    
+    //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +33,8 @@ class ProductOverviewViewController: UIViewController {
         self.productNameLabel.text = self.product?.name
         self.productImageView.image = self.productImage ?? UIImage()
     }
+    
+    //MARK: - Actions
     
     @IBAction func addToComparisonPressed(_ sender: UIButton) {
         guard let sProduct = self.product else {
@@ -42,6 +50,8 @@ class ProductOverviewViewController: UIViewController {
         }
     }
 }
+
+//MARK: - Table View
 
 extension ProductOverviewViewController: UITableViewDataSource, UITableViewDelegate {
     

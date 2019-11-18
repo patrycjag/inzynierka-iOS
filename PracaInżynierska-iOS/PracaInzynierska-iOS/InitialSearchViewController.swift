@@ -64,6 +64,8 @@ class InitialSearchViewController: UIViewController {
     }
 }
 
+//MARK: - Text Field
+
 extension InitialSearchViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

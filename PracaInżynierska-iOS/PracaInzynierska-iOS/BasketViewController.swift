@@ -9,6 +9,8 @@
 import UIKit
 
 class BasketViewController: UIViewController {
+    
+    //MARK: - Outlets
 
     @IBOutlet weak var singleShopSwitch: UISwitch!
     @IBOutlet weak var deliveryCostSwitch: UISwitch!
@@ -16,7 +18,11 @@ class BasketViewController: UIViewController {
     @IBOutlet weak var productTableVIew: UITableView!
     @IBOutlet weak var emptyBasketLabel: UILabel!
     
+    //MARK: - Variables
+    
     var loader: ActivityIndicatorView?
+    
+    //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +37,8 @@ class BasketViewController: UIViewController {
         super.viewDidAppear(animated)
         self.productTableVIew.isHidden = GlobalVariables.userBasket.count == 0
     }
+    
+    //MARK: - Actions
 
     @IBAction func compareWasPressed(_ sender: UIButton) {
         guard GlobalVariables.userBasket.count > 0 else {
@@ -39,6 +47,12 @@ class BasketViewController: UIViewController {
         }
         
         self.view.addSubview(self.loader ?? UIView())
+        calculateAndShowResults()
+    }
+    
+    //MARK: - Supplementary
+    
+    private func calculateAndShowResults() {
         APIClient.shared.calculateBestDeals(withDelivery: self.deliveryCostSwitch.isOn, fromOneShop: self.singleShopSwitch.isOn) { (response, error) in
             self.loader?.removeFromSuperview()
             
@@ -46,18 +60,16 @@ class BasketViewController: UIViewController {
                 self.showInfoAlert(alertTitle: "Error", description: error!.localizedDescription, firstTitle: "Ok", firstAction: nil)
                 return
             }
-            
-            self.handleResultPresentation(withResponse: response)
+        
+            let resultController = self.getViewController(withIdentifier: "resultsVC", fromStoryboard: "ResultViewController") as! ResultsViewController
+            resultController.multipleShopResult = response.1
+            resultController.singleShopResult = response.0
+            self.navigationController?.pushViewController(resultController, animated: true)
         }
     }
-    
-    private func handleResultPresentation(withResponse response: (SingleShopResult?, MultipleShopResult?)) {
-        let resultController = self.getViewController(withIdentifier: "resultsVC", fromStoryboard: "ResultViewController") as! ResultsViewController
-        resultController.multipleShopResult = response.1
-        resultController.singleShopResult = response.0
-        self.navigationController?.pushViewController(resultController, animated: true)
-    }
 }
+
+//MARK: - Basket Delegate
 
 extension BasketViewController: BasketDeleteDelegate {
     
@@ -67,6 +79,8 @@ extension BasketViewController: BasketDeleteDelegate {
         self.productTableVIew.reloadSections(IndexSet(arrayLiteral: 0), with: .top)
     }
 }
+
+//MARK: - Table View
 
 extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
     
