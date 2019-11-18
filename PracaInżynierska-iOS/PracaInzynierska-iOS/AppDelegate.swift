@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         var style = ToastStyle()
-        style.backgroundColor = UIColor.systemTeal
-        style.messageColor = UIColor.systemYellow
-        style.messageFont = UIFont.systemFont(ofSize: 22, weight: .bold)
+        style.backgroundColor = GlobalVariables.darkGray
+        style.messageColor = UIColor.white
+        style.messageFont = UIFont.systemFont(ofSize: 20, weight: .semibold)
         style.cornerRadius = 0
         style.displayShadow = true
         style.messageAlignment = .center

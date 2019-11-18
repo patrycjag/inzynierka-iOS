@@ -41,7 +41,7 @@ class SearchResultsViewController: UIViewController {
         self.activityView = ActivityIndicatorView(frame: UIScreen.main.bounds)
         
         let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "basket")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(self.basketPressed))
-        rightBarButtonItem.tintColor = UIColor.systemYellow
+        rightBarButtonItem.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     

@@ -57,10 +57,10 @@ class InitialSearchViewController: UIViewController {
     private func setUpView() {
         self.activityView = ActivityIndicatorView(frame: UIScreen.main.bounds)
         searchTextField.delegate = self
-         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
+        var navigationBarAppearance = self.navigationController?.navigationBar
+        navigationBarAppearance?.tintColor = GlobalVariables.lightGray
+        navigationBarAppearance?.barTintColor = GlobalVariables.darkGray
+        navigationBarAppearance?.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
     }
 }
 
