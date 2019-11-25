@@ -10,6 +10,8 @@ import UIKit
 
 class ResultTableViewCell: UITableViewCell {
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!

@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Custom view indicating some background activity
 class ActivityIndicatorView: UIView {
     
     private lazy var loaderView: UIView = {

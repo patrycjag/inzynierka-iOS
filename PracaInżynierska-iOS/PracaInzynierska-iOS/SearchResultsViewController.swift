@@ -135,7 +135,6 @@ extension SearchResultsViewController: SearchResultCellDelegate {
     
     func addToBasketWasPressed(onRow row: Int) {
         GlobalVariables.userBasket.append(self.productArray[row])
-        print("ADDING FROM ROW: \(row)")
         if !self.isToastVisible {
             self.view.makeToast("Dodano przedmiot do porównania.")
             self.isToastVisible = true

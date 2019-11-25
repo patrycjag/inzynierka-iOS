@@ -11,10 +11,15 @@ import Alamofire
 
 class APIClient {
     
-    static var shared = APIClient()
+    //MARK: - Variables
     
+    //Using the singleton structure
+    static var shared = APIClient()
     private let basePath: String = "http://ec2-35-180-69-117.eu-west-3.compute.amazonaws.com/api/v1/"
     
+    //MARK: - Data fetch functions
+    
+    //Data fetch functions with completion callbacks
     func getProducts(for name: String, completion: @escaping(_ productArray: [Product]?, _ error: Error?) -> Void) {
         Alamofire.request(basePath + "product?productName=\(name)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
             
@@ -25,21 +30,25 @@ class APIClient {
             
             var productArray = [Product]()
             
+            //Extract data from JSON and inject into models
             for product in responseJSON {
+                
                 guard let productJSON = product as? NSDictionary, let offers = productJSON["offers"] as? NSDictionary, let brand = productJSON["brand"] as? NSDictionary else {
                     continue
                 }
                 
+                //Inserting default values in case we didnt get it in the JSON
                 let name = productJSON["name"] as? String ?? ""
                 let image = productJSON["image"] as? String ?? ""
                 let lowestPrice = offers["lowPrice"] as? Double ?? 0
                 let brandName = brand["name"] as? String ?? ""
-                let skapiecID = productJSON["sku"] as? Int
+                let skapiecID = productJSON["sku"] as? Int ?? 0
                 
-                let product = Product(brand: brandName, image: image, name: name, lowestPrice: lowestPrice, skapiecID: skapiecID ?? 0)
+                let product = Product(brand: brandName, image: image, name: name, lowestPrice: lowestPrice, skapiecID: skapiecID)
                 productArray.append(product)
             }
             
+            //Call the completion function
             completion(productArray, nil)
         }
     }
@@ -90,12 +99,15 @@ class APIClient {
                 return
             }
             
+            //Create both variables since we have to return both values, one of which being nil
             let singleShopResult = singleShop ? self.createSingleShopResult(fromDictionary: jsonResponse) : nil
             let multipleShopResult = !singleShop ? self.createMultipleShopResult(fromDictionary: jsonResponse) : nil
             
             completion((singleShopResult, multipleShopResult), nil)
         }
     }
+    
+    //MARK: - Supplementary
     
     private func createSingleShopResult(fromDictionary dictionary: NSDictionary) -> SingleShopResult {
         

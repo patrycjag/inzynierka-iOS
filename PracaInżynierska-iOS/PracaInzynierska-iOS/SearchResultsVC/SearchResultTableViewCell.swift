@@ -14,11 +14,17 @@ protocol SearchResultCellDelegate {
 
 class SearchResultTableViewCell: UITableViewCell {
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    //MARK: - Variables
+    
     var delegate: SearchResultCellDelegate?
+    
+    //MARK: - Actions
     
     @IBAction func addToBasketWasPressed(_ sender: UIButton) {
         self.delegate?.addToBasketWasPressed(onRow: productImageView.tag)

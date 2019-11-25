@@ -14,12 +14,18 @@ protocol BasketDeleteDelegate {
 
 class BasketProductTableViewCell: UITableViewCell {
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     
+    //MARK: - Variables
+    
     var delegate: BasketDeleteDelegate?
+    
+    //MARK: - Actions
     
     @IBAction func deleteButtonWasPressed(_ sender: UIButton) {
         self.delegate?.productWasDeleted(atRow: sender.tag)

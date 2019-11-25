@@ -10,6 +10,8 @@ import UIKit
 
 class ShopOfferTableViewCell: UITableViewCell {
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

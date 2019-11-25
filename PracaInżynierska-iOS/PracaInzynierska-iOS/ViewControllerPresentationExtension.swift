@@ -9,8 +9,8 @@
 
 extension UIViewController {
     
+    //Purely visual benefits, since in every controller we would need those lines to get a new view controller
     func getViewController(withIdentifier id: String, fromStoryboard storyboard: String) -> UIViewController {
-        
         let storyboard = UIStoryboard(name: storyboard, bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: id)
         return viewController

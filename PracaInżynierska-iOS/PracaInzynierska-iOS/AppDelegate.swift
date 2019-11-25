@@ -12,14 +12,12 @@ import Toast_Swift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        // Override point for customization after application launch.
         var style = ToastStyle()
         style.backgroundColor = GlobalVariables.darkGray
         style.messageColor = UIColor.white
-        style.messageFont = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        style.messageFont = UIFont.systemFont(ofSize: 18, weight: .regular)
         style.cornerRadius = 0
         style.displayShadow = true
         style.messageAlignment = .center
@@ -27,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ToastManager.shared.duration = 0.4
         ToastManager.shared.position = .center
         ToastManager.shared.style = style
-        // Override point for customization after application launch.
+        
         return true
     }
 
