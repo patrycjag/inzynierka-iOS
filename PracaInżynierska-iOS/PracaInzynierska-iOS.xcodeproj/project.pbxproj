@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF9DEC9E761B1162A992DBDA /* Pods_PracaInzynierska_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170EF8FBF766600CCCF0BB67 /* Pods_PracaInzynierska_iOS.framework */; };
 		B33B1B09235318C2001C8F70 /* InitialSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33B1B08235318C2001C8F70 /* InitialSearchViewController.storyboard */; };
 		B33B1B0C23531F4E001C8F70 /* SearchResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33B1B0B23531F4E001C8F70 /* SearchResultsViewController.storyboard */; };
 		B33B1B0E23531F61001C8F70 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B1B0D23531F61001C8F70 /* SearchResultsViewController.swift */; };
@@ -35,12 +34,12 @@
 		B3C7353F23537832001677F3 /* ProductOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7353E23537832001677F3 /* ProductOverviewViewController.swift */; };
 		B3C7354123537844001677F3 /* ProductOverviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C7354023537844001677F3 /* ProductOverviewViewController.storyboard */; };
 		B3E5FC4723795F290023116F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E5FC4623795F290023116F /* Product.swift */; };
+		B6559DB6F333C872768F0BC3 /* Pods_PracaInzynierska_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D90C8A59314A205D343873 /* Pods_PracaInzynierska_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C2DFF8A9774CFEDC7C3CB51 /* Pods-PracaInzynierska-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracaInzynierska-iOS.debug.xcconfig"; path = "Target Support Files/Pods-PracaInzynierska-iOS/Pods-PracaInzynierska-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		170EF8FBF766600CCCF0BB67 /* Pods_PracaInzynierska_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracaInzynierska_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AB57A1159154D77E2E6B536 /* Pods-PracaInzynierska-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracaInzynierska-iOS.release.xcconfig"; path = "Target Support Files/Pods-PracaInzynierska-iOS/Pods-PracaInzynierska-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		6FF13851CA9A40ADA351D48D /* Pods-PracaInzynierska-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracaInzynierska-iOS.debug.xcconfig"; path = "Target Support Files/Pods-PracaInzynierska-iOS/Pods-PracaInzynierska-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		78D90C8A59314A205D343873 /* Pods_PracaInzynierska_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracaInzynierska_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33B1B08235318C2001C8F70 /* InitialSearchViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialSearchViewController.storyboard; sourceTree = "<group>"; };
 		B33B1B0B23531F4E001C8F70 /* SearchResultsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SearchResultsViewController.storyboard; path = ../SearchResultsViewController.storyboard; sourceTree = "<group>"; };
 		B33B1B0D23531F61001C8F70 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultsViewController.swift; path = ../SearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		B3C7353E23537832001677F3 /* ProductOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductOverviewViewController.swift; path = ../ProductOverviewViewController.swift; sourceTree = "<group>"; };
 		B3C7354023537844001677F3 /* ProductOverviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ProductOverviewViewController.storyboard; path = ../ProductOverviewViewController.storyboard; sourceTree = "<group>"; };
 		B3E5FC4623795F290023116F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Product.swift; path = ../Product.swift; sourceTree = "<group>"; };
+		EADAD04E2695AA51E37B4493 /* Pods-PracaInzynierska-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracaInzynierska-iOS.release.xcconfig"; path = "Target Support Files/Pods-PracaInzynierska-iOS/Pods-PracaInzynierska-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9DEC9E761B1162A992DBDA /* Pods_PracaInzynierska_iOS.framework in Frameworks */,
+				B6559DB6F333C872768F0BC3 /* Pods_PracaInzynierska_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,16 +87,16 @@
 		1ACEFB645A06A23C1C8B2FEF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0C2DFF8A9774CFEDC7C3CB51 /* Pods-PracaInzynierska-iOS.debug.xcconfig */,
-				3AB57A1159154D77E2E6B536 /* Pods-PracaInzynierska-iOS.release.xcconfig */,
+				6FF13851CA9A40ADA351D48D /* Pods-PracaInzynierska-iOS.debug.xcconfig */,
+				EADAD04E2695AA51E37B4493 /* Pods-PracaInzynierska-iOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		4C7751290DAD2D2B65F9C3F1 /* Frameworks */ = {
+		89E6F8B67A65ED79D05FC489 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				170EF8FBF766600CCCF0BB67 /* Pods_PracaInzynierska_iOS.framework */,
+				78D90C8A59314A205D343873 /* Pods_PracaInzynierska_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,7 +126,7 @@
 				B33D76C62352191C00D8FBEA /* PracaInzynierska-iOS */,
 				B33D76C52352191C00D8FBEA /* Products */,
 				1ACEFB645A06A23C1C8B2FEF /* Pods */,
-				4C7751290DAD2D2B65F9C3F1 /* Frameworks */,
+				89E6F8B67A65ED79D05FC489 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,11 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B33D76D82352191D00D8FBEA /* Build configuration list for PBXNativeTarget "PracaInzynierska-iOS" */;
 			buildPhases = (
-				36329290DFFA6FF7A8A29B91 /* [CP] Check Pods Manifest.lock */,
+				AAE0ACAF8EA31CEB53F109FE /* [CP] Check Pods Manifest.lock */,
 				B33D76C02352191C00D8FBEA /* Sources */,
 				B33D76C12352191C00D8FBEA /* Frameworks */,
 				B33D76C22352191C00D8FBEA /* Resources */,
-				AA333608FF3666D330CBA219 /* [CP] Embed Pods Frameworks */,
+				B0BBDAA62F05A1BD1B1C8A0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,7 +283,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36329290DFFA6FF7A8A29B91 /* [CP] Check Pods Manifest.lock */ = {
+		AAE0ACAF8EA31CEB53F109FE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,7 +305,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AA333608FF3666D330CBA219 /* [CP] Embed Pods Frameworks */ = {
+		B0BBDAA62F05A1BD1B1C8A0D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -482,7 +482,7 @@
 		};
 		B33D76D92352191D00D8FBEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C2DFF8A9774CFEDC7C3CB51 /* Pods-PracaInzynierska-iOS.debug.xcconfig */;
+			baseConfigurationReference = 6FF13851CA9A40ADA351D48D /* Pods-PracaInzynierska-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -495,13 +495,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "agh.ti.PracaInzynierska-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B33D76DA2352191D00D8FBEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3AB57A1159154D77E2E6B536 /* Pods-PracaInzynierska-iOS.release.xcconfig */;
+			baseConfigurationReference = EADAD04E2695AA51E37B4493 /* Pods-PracaInzynierska-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -514,7 +514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "agh.ti.PracaInzynierska-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -57,7 +57,8 @@ class BasketViewController: UIViewController {
             self.loader?.removeFromSuperview()
             
             guard error == nil else {
-                self.showInfoAlert(alertTitle: "Error", description: error!.localizedDescription, firstTitle: "Ok", firstAction: nil)
+                let description = error!.localizedDescription == "Could not find any matching products." ? "One of the products is not available in any shop." : error!.localizedDescription
+                self.showInfoAlert(alertTitle: "Error", description: description , firstTitle: "Ok", firstAction: nil)
                 return
             }
         

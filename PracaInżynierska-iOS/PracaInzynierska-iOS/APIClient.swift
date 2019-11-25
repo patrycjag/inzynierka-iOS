@@ -94,8 +94,9 @@ class APIClient {
         print("Deals URL: ", urlString)
         Alamofire.request(urlString, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
             
-            guard let jsonResponse = response.result.value as? NSDictionary, response.error == nil, response.result.isSuccess else {
-                completion((nil, nil), response.error)
+            guard let jsonResponse = response.result.value as? NSDictionary, response.error == nil, response.result.isSuccess, jsonResponse["error"] == nil else {
+                let errorJson = response.result.value as? NSDictionary ?? [:]
+                completion((nil, nil), NSError(domain: "Inż", code: 400, userInfo: [NSLocalizedDescriptionKey: errorJson["error"] ?? response.error?.localizedDescription]))
                 return
             }
             

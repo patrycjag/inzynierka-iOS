@@ -92,7 +92,8 @@ extension SearchResultsViewController: UITableViewDelegate {
         APIClient.shared.getProductDetails(for: "\( productArray[indexPath.row].skapiecID)") { (response, error) in
             self.activityView?.removeFromSuperview()
             guard let offers = response, error == nil else {
-                self.showInfoAlert(alertTitle: "Error", description: error!.localizedDescription, firstTitle: "Ok", firstAction: nil)
+                let description = error == nil ? "No available offers" : error!.localizedDescription
+                self.showInfoAlert(alertTitle: "Error", description: description , firstTitle: "Ok", firstAction: nil)
                 return
             }
             let cell = tableView.cellForRow(at: indexPath) as! SearchResultTableViewCell
